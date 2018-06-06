@@ -1,1 +1,4 @@
-rails generate scaffold item id          : primary_key, parent_id   : integer, code        : string, name        : string, created_on  : timestamp, updated_on  : timestamp, data        : text
+rails generate scaffold item parent_id:integer code:string name:string created_on:timestamp updated_on:timestamp data:text
+rails db:migrate RAILS_ENV=development
+
+rails active_storage:install

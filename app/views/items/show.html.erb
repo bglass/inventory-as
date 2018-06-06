@@ -15,6 +15,18 @@
   <%= @item.name %>
 </p>
 
+<% if @item.images.attached? %>
+<p>
+  <strong>Images:</strong>
+  <br>
+  <% @item.images.each do |image| %>
+    <%= image_tag image.variant(resize: "100x100") %>
+  <% end %>
+</p>
+<% end %>
+
+
+
 <p>
   <strong>Created on:</strong>
   <%= @item.created_on %>
