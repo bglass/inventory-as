@@ -2,7 +2,7 @@
 
 <p>
   <strong>Parent:</strong>
-  <%= @item.parent_id %>
+  <%= (link_to @item.parent.name, @item.parent) if @item.parent %>
 </p>
 
 <p>
