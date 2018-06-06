@@ -12,13 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :id %>
-    <%= form.text_field :id %>
-  </div>
-
-  <div class="field">
     <%= form.label :parent_id %>
-    <%= form.text_field :parent_id %>
+    <%= form.number_field :parent_id %>
   </div>
 
   <div class="field">
@@ -33,12 +28,12 @@
 
   <div class="field">
     <%= form.label :created_on %>
-    <%= form.text_field :created_on %>
+    <%= form.datetime_select :created_on %>
   </div>
 
   <div class="field">
     <%= form.label :updated_on %>
-    <%= form.text_field :updated_on %>
+    <%= form.datetime_select :updated_on %>
   </div>
 
   <div class="field">

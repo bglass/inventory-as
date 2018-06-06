@@ -1,19 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id: 
-  parent_id: 
-  code: 
-  name: 
-  created_on: 
-  updated_on: 
+  parent_id: 1
+  code: MyString
+  name: MyString
+  created_on: 2018-06-06 16:53:20
+  updated_on: 2018-06-06 16:53:20
   data: MyText
 
 two:
-  id: 
-  parent_id: 
-  code: 
-  name: 
-  created_on: 
-  updated_on: 
+  parent_id: 1
+  code: MyString
+  name: MyString
+  created_on: 2018-06-06 16:53:20
+  updated_on: 2018-06-06 16:53:20
   data: MyText

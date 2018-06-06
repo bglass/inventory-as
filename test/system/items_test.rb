@@ -17,7 +17,6 @@ class ItemsTest < ApplicationSystemTestCase
     fill_in "Code", with: @item.code
     fill_in "Created On", with: @item.created_on
     fill_in "Data", with: @item.data
-    fill_in "Id", with: @item.id
     fill_in "Name", with: @item.name
     fill_in "Parent", with: @item.parent_id
     fill_in "Updated On", with: @item.updated_on
@@ -34,7 +33,6 @@ class ItemsTest < ApplicationSystemTestCase
     fill_in "Code", with: @item.code
     fill_in "Created On", with: @item.created_on
     fill_in "Data", with: @item.data
-    fill_in "Id", with: @item.id
     fill_in "Name", with: @item.name
     fill_in "Parent", with: @item.parent_id
     fill_in "Updated On", with: @item.updated_on
