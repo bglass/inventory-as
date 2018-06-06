@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 
+  parent_id: 
+  code: 
+  name: 
+  created_on: 
+  updated_on: 
+  data: MyText
+
+two:
+  id: 
+  parent_id: 
+  code: 
+  name: 
+  created_on: 
+  updated_on: 
+  data: MyText

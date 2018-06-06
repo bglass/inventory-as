@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id:</strong>
+  <%= @item.id %>
+</p>
+
+<p>
+  <strong>Parent:</strong>
+  <%= @item.parent_id %>
+</p>
+
+<p>
+  <strong>Code:</strong>
+  <%= @item.code %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @item.name %>
+</p>
+
+<p>
+  <strong>Created on:</strong>
+  <%= @item.created_on %>
+</p>
+
+<p>
+  <strong>Updated on:</strong>
+  <%= @item.updated_on %>
+</p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @item.data %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
