@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Item.create(code:"Inventory", name:"Inventory")   # with item.rb: 2belongs_to :parent, class_name: "Item", optional: true 
