@@ -1,0 +1,36 @@
+p id="notice" = notice
+
+p
+  strong Parent
+  = (link_to @item.parent.name, @item.parent) if @item.parent
+
+p
+  strong Code:
+  = @item.code
+
+p
+  strong Name:
+  = @item.name
+
+- if @item.images.attached?
+  p
+    strong Images:
+    br
+    - @item.images.each do |image|
+      = image_tag image.variant(resize: "100x100")
+
+p
+  strong Created on:
+  = @item.created_on
+
+p
+  strong Updated on:
+  = @item.updated_on
+
+p
+  strong Data:
+  = @item.data
+
+= link_to 'Edit', edit_item_path(@item)
+| |
+= link_to 'Back', items_path
