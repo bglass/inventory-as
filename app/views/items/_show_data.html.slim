@@ -1,0 +1,49 @@
+h1 = @item.name
+
+.code
+ = "[#{@item.code}]"
+
+- if @item.parent
+  - siblings  = @item.parent.children.map{|c| c.id}
+  - index     = siblings.find_index(@item.id)
+  - previous  = siblings[index-1] if index >0
+  - successor = siblings[index+1] if index < siblings.count
+
+  p
+    strong Location:
+    - if @item.parent && @item.parent.images.any?
+      = link_to (image_tag @item.parent.images.first.variant(resize: "50x50")), @item.parent
+      = link_to @item.parent.name, @item.parent
+
+
+p
+  - if previous
+    a.button href="/items/#{previous}"  <
+  - else
+    a.button_disabled
+      | &nbsp;
+  - if successor
+    a.button href="/items/#{successor}" >
+  - else
+    a.button_disabled
+      | &nbsp;
+
+
+p
+  strong Data:
+  = @item.data
+
+/ p
+/   strong Created on:
+/   = @item.created_on
+/
+/ p
+/   strong Updated on:
+/   = @item.updated_on
+
+p
+  = link_to 'Edit', edit_item_path(@item)
+  |  |
+  = link_to 'Index', items_path
+
+  p id="notice" = notice

@@ -1,0 +1,15 @@
+h1 Content
+
+a.button href="/item/add/#{@item.id}"  +
+a.button href="/item/add/#{@item.id}"  ?
+
+p
+  table
+    tbody
+    - @item.children.each do |child|
+      tr
+        td
+          - if child.images.any?
+            = image_tag child.images[0].variant(resize: "35x35")
+        td
+          = link_to child.name, child

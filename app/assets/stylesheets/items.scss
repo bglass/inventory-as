@@ -1,3 +1,57 @@
 // Place all the styles related to the items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+a.button {
+  text-decoration: none; font: menu;
+  display: inline-block; padding: 2px 8px;
+  background: ButtonFace; color: ButtonText;
+  border-style: solid; border-width: 2px;
+  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+}
+a.button:active {
+    border-color: ButtonShadow ButtonHighlight ButtonHighlight ButtonShadow;
+}
+a.button_disabled{
+  text-decoration: none; font: menu;
+  display: inline-block; padding: 2px 8px;
+  background: ButtonFace; color: ButtonText;
+  border-style: solid; border-width: 2px;
+  border-color: ButtonHighlight ButtonShadow ButtonShadow ButtonHighlight;
+}
+
+.flex-container {
+  display: flex;
+  // background-color: DodgerBlue;
+}
+
+
+.flex-container > div {
+  margin: 2px;
+  padding: 2px;
+  width: 33%;
+}
+
+@media screen and (max-width: 700px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    .flex-container > div {
+      width: 100%;
+    }
+}
+
+.code {
+  color: #888888;
+  font-family: "OCR A Std", monospace;
+}
+
+.main_image {
+  width: 90%;
+  height: auto;
+}
+
+.thumbnail {
+  padding: 2px;
+  float: left;
+}

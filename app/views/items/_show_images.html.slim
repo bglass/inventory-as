@@ -1,0 +1,9 @@
+h1 Photos
+
+- if @item.images.attached?
+
+  = image_tag @item.images[0].variant(resize: "400x400"), class: "main_image"
+
+  p
+    - @item.images.drop(1).each do |image|
+      = image_tag image.variant(resize: "100x100"), class: "thumbnail"
