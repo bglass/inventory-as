@@ -29,9 +29,19 @@ p
       | &nbsp;
 
 
+/ p
+/   strong Data:
+/   = @item.data
+
 p
   strong Data:
-  = @item.data
+
+  = form_for @item do |i|
+    - i.object.data_hash.each do |k,v|
+      = text_field 'item[data_hash][][name]', k
+      = text_field 'item[data_hash][][value]', v
+
+
 
 / p
 /   strong Created on:
